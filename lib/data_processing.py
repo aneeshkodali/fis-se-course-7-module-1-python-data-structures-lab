@@ -24,4 +24,4 @@ def display_students(student_list):
     # loop through list
     for student in student_list:
         # print record
-        format_student_data(student)
+        print(format_student_data(student))
