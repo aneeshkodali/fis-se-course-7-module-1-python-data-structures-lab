@@ -1,6 +1,8 @@
 # This module initializes student records.
 
 # Define a list of students stored as tuples (ID, Name, Major)
+    # tuple ensures a 'fixed schema' for records
+    # important since other functions reference tuples' information by position
 students = [
     (101, "Alice Johnson", "Computer Science"),
     (102, "Bob Smith", "Mathematics"),

@@ -11,6 +11,7 @@ def format_student_data(student):
     """
     
     # create string
+        # this format via positional attributed works since the tuple schema is 'set in stone'
     student_display = f"ID: {student[0]} | Name: {student[1]} | Major: {student[2]}"
 
     return student_display
@@ -24,4 +25,5 @@ def display_students(student_list):
     # loop through list
     for student in student_list:
         # print record
+            # references existing function
         print(format_student_data(student))

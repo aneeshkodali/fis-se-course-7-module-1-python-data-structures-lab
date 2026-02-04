@@ -7,6 +7,7 @@ def student_generator(student_list, major):
     """
     
     # create generator with major filter
+        # similar logic to the filter_students_by_major function, so may be worth importing and referencing that instead
     students_filtered = (
         student for student in student_list
         if student[2].lower() == major.lower()
