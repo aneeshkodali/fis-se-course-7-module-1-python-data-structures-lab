@@ -1,5 +1,23 @@
 # Student Data Management System Lab
 
+## Aneesh Kodali's Future Enhancements
+
+The following suggestions are potential enhancements to make on top of the pre-existing core logic to ensure data quality and minimize code rewrites:
+- Student data
+  - A function could be written to test if each tuple in the student list is of length 3.
+    - This could be accomplished via list comprehension to filter the list for records whose length == 3.
+    - A boolean can be returned based on whether the filtered list is empty or not.
+  - A function could be written to test if each student's ID is unique.
+    - This could be accomplished via set comprehension to create a list of unique IDs.
+    - A boolean can be returned based on whether the unique ID set length equals the length of the original list.
+    - A function could be written to return 'the next available ID' to use for a subsequent student record. This assumes that the IDs are integers and incremented by 1 for each new student.
+        - Example: if the last ID is 103, the next ID would be 104
+        - This could be accomplished via creating a generator off of the list.
+        - `next()` could be used on the generator to return the record with the highest ID and then adding 1. The number of times `next()` would be called depends on how the records are sorted within the generator.
+- Logic reuse
+    - The `student_generator()` function currently reuses the same 'comprehension filtering' and arguments as the `filter_students_by_major`.
+    - The `filter_students_by_major` function could be imported into the `student_generator()` function to promote code reuse.
+
 ## Learning Goals
 
 - Utilize **lists, tuples, and sets** to store and manage student records.
